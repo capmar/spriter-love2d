@@ -1,5 +1,5 @@
-char{
-idle_healthy= {
+return { --char
+idle_healthy= Spriter.newAnim{
 {name='idle_healthy_0', duration=10.00000},
 {name='idle_healthy_0a', duration=10.00000},
 {name='idle_healthy_0', duration=10.00000},
@@ -23,7 +23,7 @@ idle_healthy= {
 {name='idle_healthy_2', duration=10.00000},
 {name='idle_healthy_1', duration=10.00000},
 },
-walk= {
+walk= Spriter.newAnim{
 {name='walk_0', duration=5.00000},
 {name='walk_1', duration=5.00000},
 {name='walk_2', duration=5.00000},
@@ -35,10 +35,10 @@ walk= {
 {name='walk_8', duration=5.00000},
 {name='walk_9', duration=5.00000},
 },
-}
+},
 
-frames{
-idle_healthy_0= {
+{ --frames
+idle_healthy_0= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -6.00000, y= -116.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 354.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 15.00000, y= -93.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 358.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 10.00000, y= -90.00000 },
@@ -59,7 +59,7 @@ idle_healthy_0= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -46.00000, y= -91.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -39.00000, y= -121.00000 },
 },
-idle_healthy_0a= {
+idle_healthy_0a= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -6.00000, y= -116.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 354.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 15.00000, y= -93.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 358.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 10.00000, y= -90.00000 },
@@ -80,7 +80,7 @@ idle_healthy_0a= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -46.00000, y= -91.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -39.00000, y= -121.00000 },
 },
-idle_healthy_0b= {
+idle_healthy_0b= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -6.00000, y= -116.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 354.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 15.00000, y= -93.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 358.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 10.00000, y= -90.00000 },
@@ -101,7 +101,7 @@ idle_healthy_0b= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -46.00000, y= -91.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -39.00000, y= -121.00000 },
 },
-idle_healthy_1= {
+idle_healthy_1= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -5.00000, y= -117.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 356.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 15.00000, y= -94.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 10.00000, y= -91.00000 },
@@ -122,7 +122,7 @@ idle_healthy_1= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -47.00000, y= -93.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -39.00000, y= -123.00000 },
 },
-idle_healthy_2= {
+idle_healthy_2= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -4.00000, y= -117.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 18.00000, y= -90.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 11.00000, y= -91.00000 },
@@ -143,7 +143,7 @@ idle_healthy_2= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -48.00000, y= -93.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -40.00000, y= -123.00000 },
 },
-idle_healthy_3= {
+idle_healthy_3= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 3.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -6.00000, y= -118.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 18.00000, y= -91.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 1.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 11.00000, y= -92.00000 },
@@ -164,7 +164,7 @@ idle_healthy_3= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -50.00000, y= -95.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -40.00000, y= -125.00000 },
 },
-idle_healthy_4= {
+idle_healthy_4= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -6.00000, y= -119.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 18.00000, y= -91.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 11.00000, y= -92.00000 },
@@ -185,7 +185,7 @@ idle_healthy_4= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -51.00000, y= -95.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -41.00000, y= -125.00000 },
 },
-idle_healthy_5= {
+idle_healthy_5= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 6.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -4.00000, y= -119.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 20.00000, y= -92.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 13.00000, y= -93.00000 },
@@ -206,7 +206,7 @@ idle_healthy_5= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -52.00000, y= -96.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -41.00000, y= -126.00000 },
 },
-idle_healthy_5a= {
+idle_healthy_5a= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 6.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -4.00000, y= -119.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 20.00000, y= -92.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 13.00000, y= -93.00000 },
@@ -227,7 +227,7 @@ idle_healthy_5a= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -52.00000, y= -96.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -41.00000, y= -126.00000 },
 },
-idle_healthy_5b= {
+idle_healthy_5b= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 6.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -4.00000, y= -119.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 20.00000, y= -92.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 13.00000, y= -93.00000 },
@@ -248,7 +248,7 @@ idle_healthy_5b= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -52.00000, y= -96.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -41.00000, y= -126.00000 },
 },
-idle_healthy_4_blinka= {
+idle_healthy_4_blinka= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -6.00000, y= -119.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 18.00000, y= -91.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 11.00000, y= -92.00000 },
@@ -270,7 +270,7 @@ idle_healthy_4_blinka= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -51.00000, y= -95.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -41.00000, y= -125.00000 },
 },
-idle_healthy_4_blinkb= {
+idle_healthy_4_blinkb= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -6.00000, y= -119.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 21.00000, height= 22.00000, x= 18.00000, y= -91.00000 },
 { image= 'p1_forearms_0\\forearm_a.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 39.00000, height= 52.00000, x= 11.00000, y= -92.00000 },
@@ -292,7 +292,7 @@ idle_healthy_4_blinkb= {
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 44.00000, height= 60.00000, x= -51.00000, y= -95.00000 },
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 51.00000, height= 52.00000, x= -41.00000, y= -125.00000 },
 },
-walk_0= {
+walk_0= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 44.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -37.00000, y= -69.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 352.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 12.00000, y= -81.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= 7.00000, y= -104.00000 },
@@ -313,7 +313,7 @@ walk_0= {
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 52.00000, height= 53.00000, x= -42.00000, y= -113.00000 },
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 44.00000, height= 61.00000, x= -54.00000, y= -84.00000 },
 },
-walk_1= {
+walk_1= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 44.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -39.00000, y= -70.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 349.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 11.00000, y= -83.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= 3.00000, y= -104.00000 },
@@ -334,7 +334,7 @@ walk_1= {
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 52.00000, height= 53.00000, x= -40.00000, y= -116.00000 },
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 44.00000, height= 61.00000, x= -49.00000, y= -86.00000 },
 },
-walk_2= {
+walk_2= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 17.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -31.00000, y= -95.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 331.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 12.00000, y= -86.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= 2.00000, y= -108.00000 },
@@ -355,7 +355,7 @@ walk_2= {
 { image= 'p1_shoulders_0\\shoulder_0.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 52.00000, height= 53.00000, x= -39.00000, y= -116.00000 },
 { image= 'p1_forearms_0\\forearm_0.png', color= 16777215, opacity= 100.00000, angle= 9.00000, xflip= 0, yflip= 0, width= 44.00000, height= 61.00000, x= -50.00000, y= -81.00000 },
 },
-walk_3= {
+walk_3= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 8.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -35.00000, y= -100.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 331.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 6.00000, y= -88.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 3.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= -3.00000, y= -106.00000 },
@@ -377,7 +377,7 @@ walk_3= {
 { image= 'p1_forearms_0\\hand_a.png', color= 16777215, opacity= 100.00000, angle= 13.00000, xflip= 0, yflip= 0, width= 30.00000, height= 36.00000, x= -28.00000, y= -57.00000 },
 { image= 'p1_forearms_0\\forearm_nohand.png', color= 16777215, opacity= 100.00000, angle= 24.00000, xflip= 0, yflip= 0, width= 32.00000, height= 45.00000, x= -41.00000, y= -77.00000 },
 },
-walk_4= {
+walk_4= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -34.00000, y= -101.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 328.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= -5.00000, y= -86.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 358.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= -14.00000, y= -104.00000 },
@@ -399,7 +399,7 @@ walk_4= {
 { image= 'p1_forearms_0\\hand_a.png', color= 16777215, opacity= 100.00000, angle= 19.00000, xflip= 0, yflip= 0, width= 30.00000, height= 36.00000, x= -21.00000, y= -52.00000 },
 { image= 'p1_forearms_0\\forearm_nohand.png', color= 16777215, opacity= 100.00000, angle= 25.00000, xflip= 0, yflip= 0, width= 32.00000, height= 45.00000, x= -34.00000, y= -73.00000 },
 },
-walk_5= {
+walk_5= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 359.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -45.00000, y= -107.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 319.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= -9.00000, y= -91.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 351.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= -16.00000, y= -107.00000 },
@@ -421,7 +421,7 @@ walk_5= {
 { image= 'p1_forearms_0\\hand_a.png', color= 16777215, opacity= 100.00000, angle= 29.00000, xflip= 0, yflip= 0, width= 30.00000, height= 36.00000, x= -14.00000, y= -44.00000 },
 { image= 'p1_forearms_0\\forearm_nohand.png', color= 16777215, opacity= 100.00000, angle= 27.00000, xflip= 0, yflip= 0, width= 32.00000, height= 45.00000, x= -27.00000, y= -67.00000 },
 },
-walk_6= {
+walk_6= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -35.00000, y= -104.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 343.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= -5.00000, y= -85.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= -10.00000, y= -107.00000 },
@@ -443,7 +443,7 @@ walk_6= {
 { image= 'p1_forearms_0\\hand_a.png', color= 16777215, opacity= 100.00000, angle= 35.00000, xflip= 0, yflip= 0, width= 30.00000, height= 36.00000, x= -25.00000, y= -46.00000 },
 { image= 'p1_forearms_0\\forearm_nohand.png', color= 16777215, opacity= 100.00000, angle= 28.00000, xflip= 0, yflip= 0, width= 32.00000, height= 45.00000, x= -36.00000, y= -70.00000 },
 },
-walk_7= {
+walk_7= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 5.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -34.00000, y= -108.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 338.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= -1.00000, y= -85.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= -10.00000, y= -105.00000 },
@@ -465,7 +465,7 @@ walk_7= {
 { image= 'p1_forearms_0\\hand_a.png', color= 16777215, opacity= 100.00000, angle= 13.00000, xflip= 0, yflip= 0, width= 30.00000, height= 36.00000, x= -32.00000, y= -54.00000 },
 { image= 'p1_forearms_0\\forearm_nohand.png', color= 16777215, opacity= 100.00000, angle= 16.00000, xflip= 0, yflip= 0, width= 32.00000, height= 45.00000, x= -41.00000, y= -77.00000 },
 },
-walk_8= {
+walk_8= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 26.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -39.00000, y= -87.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 345.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 4.00000, y= -86.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 7.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= -3.00000, y= -102.00000 },
@@ -487,7 +487,7 @@ walk_8= {
 { image= 'p1_forearms_0\\hand_a.png', color= 16777215, opacity= 100.00000, angle= 9.00000, xflip= 0, yflip= 0, width= 30.00000, height= 36.00000, x= -43.00000, y= -59.00000 },
 { image= 'p1_forearms_0\\forearm_nohand.png', color= 16777215, opacity= 100.00000, angle= 360.00000, xflip= 0, yflip= 0, width= 32.00000, height= 45.00000, x= -42.00000, y= -87.00000 },
 },
-walk_9= {
+walk_9= Spriter.newFrame{
 { image= 'p1_sheild_0\\shield_b.png', color= 16777215, opacity= 100.00000, angle= 38.00000, xflip= 0, yflip= 0, width= 72.00000, height= 108.00000, x= -37.00000, y= -77.00000 },
 { image= 'p1_arms_0\\arm_b.png', color= 16777215, opacity= 100.00000, angle= 340.00000, xflip= 0, yflip= 0, width= 26.00000, height= 26.00000, x= 13.00000, y= -86.00000 },
 { image= 'p1_shoulders_0\\shoulder_a.png', color= 16777215, opacity= 100.00000, angle= 2.00000, xflip= 0, yflip= 0, width= 40.00000, height= 40.00000, x= 6.00000, y= -104.00000 },

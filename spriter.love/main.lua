@@ -1,4 +1,4 @@
-Spriter= require 'spriter'
+Spriter= require 'Spriter'
 
 local herospriter
 local herodata= {
@@ -10,30 +10,21 @@ local herodata= {
 --
 
 local function draw (anim, t)
-	local i= anim:getFrameIndex (t * 100)
-	local frame= herospriter.getFrame(anim:getFrameName (i))
-
-	love.graphics.push()
-	love.graphics.translate (herodata.x, 500)
-	love.graphics.scale (herodata.dir, 1)
-	frame:draw()
-	love.graphics.pop()
+	local i= anim.getFrameIndex (t * 100)
+	local frame= herospriter.getFrame(anim.getFrameName (i))
+	frame.draw (herodata.x, 500, 0, herodata.dir, 1)
 end
 
 local function drawTween (anim, t)
-	local i, ratio= anim:getFrameIndex (t * 100)
+	local i, ratio= anim.getFrameIndex (t * 100)
 	local j= i + 1
-	if #anim < j then j= 1 end
+	if anim.numFrames() < j then j= 1 end
 	
-	local frame1= herospriter.getFrame(anim:getFrameName (i))
-	local frame2= herospriter.getFrame(anim:getFrameName (j))
-	local frame= frame1:mix (frame2, ratio)
+	local frame1= herospriter.getFrame(anim.getFrameName (i))
+	local frame2= herospriter.getFrame(anim.getFrameName (j))
+	local frame= frame1.mix (frame2, ratio)
 
-	love.graphics.push()
-	love.graphics.translate (herodata.x, 500)
-	love.graphics.scale (herodata.dir, 1)
-	frame:draw()
-	love.graphics.pop()
+	frame.draw(herodata.x, 500, 0, herodata.dir, 1)
 end
 
 --

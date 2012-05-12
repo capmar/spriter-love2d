@@ -28,39 +28,39 @@ class SaxHandler (xml.sax.handler.ContentHandler):
 	def startElement (self, name, attrs):
 		self.tags.append (name)
 		if name == 'char':
-			print 'char{'
-			
+			print 'return { --char'
+
 		if name in tags_dict:
 			self.dict= {}
 		elif name in tags_value:
 			self.charlist= []
-				
+
 	def endElement (self, name):
 		self.tags.pop()
 		if name == 'char':
-			print '}'
+			print '},'
 			print
-			print 'frames{'
+			print '{ --frames'
 		elif name == 'spriterdata':
 			print '}'
-			
+
 		if name == 'frame' and self.tags[-1] == 'anim':
 			printAnimFrame (self.dict)
 		elif name == 'sprite':
 			printSprite (self.dict)
 		elif name == 'anim' or (name == 'frame' and self.tags[-1] == 'spriterdata'):
-			print '},'				
+			print '},'
 		elif name in tags_value:
 			value= ''.join (self.charlist)
 			self.charlist= None
-			
+
 			if self.dict is not None:
 				self.dict[name]= value
-			
+
 			if name == 'name' and isAnim (self.tags):
-				print "%s= {" % (value)
+				print "%s= Spriter.newAnim{" % (value)
 			elif name == 'name' and isFrame (self.tags):
-				print "%s= {" % (value)
+				print "%s= Spriter.newFrame{" % (value)
 
 	def characters (self, ch):
 		if self.charlist is not None:

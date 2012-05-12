@@ -28,17 +28,9 @@ Include the file _spriter.lua_, your Spriter image folders and the converted SCM
 
 	local data= Spriter.new ('BetaFormatHero.lua')
 	local anim= data.getAnim ('idle_healthy')
-	local i= anim:getFrameIndex (tsec * 100)
-	local frame= data.getFrame(anim:getFrameName (i))
-	frame:draw()
-
-spriter-love2d currently alway draws a Spriter frame at position (0, 0). You may use love2d's support for matrix manipulation to affect the draw rotation, scale and position.
-
-	love.graphics.push()
-	love.graphics.translate (x, y) --position character
-	love.graphics.scale (-1, 1)	--flip character's x direction
-	frame:draw()
-	love.graphics.pop()
+	local i= anim.getFrameIndex (tsec * 100)
+	local frame= data.getFrame(anim.getFrameName (i))
+	frame.draw(x, y, r, sx, sy)
 
 See the project file _main.lua_ for an example basic playback for Spriter.
 

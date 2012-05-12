@@ -1,4 +1,6 @@
 
+Spriter= {}
+
 --- image data
 
 local imagedata= {}
@@ -16,25 +18,32 @@ end
 
 -- anim
 
-local Anim= {}
-
-function Anim.sumDuration(self)
+local function animSumDuration(anim)
 	local sum= 0
 	
-	for i,frame in ipairs(self) do
+	for i,frame in ipairs(anim) do
 		sum= sum + frame.duration
 	end
 
 	return sum
 end
 
-function Anim.getFrameIndex (self, t)
-	t= t % Anim.sumDuration (self)
+local function animGetFrameIndex (anim, t)
+	t= t % animSumDuration (anim)
 	
-	for i,frame in ipairs(self) do
+	for i,frame in ipairs(anim) do
 		if t < frame.duration then return i, t / frame.duration end
 		t= t - frame.duration
 	end
+end
+
+function Spriter.newAnim (keyframes)
+	return {
+		sumDuration= function() return animSumDuration (keyframes) end,
+		getFrameIndex= function(t) return animGetFrameIndex (keyframes, t) end,
+		getFrameName= function(i) return keyframes[i].name end,
+		numFrames= function() return #keyframes end,
+	}
 end
 
 --- frame
@@ -57,11 +66,20 @@ local function makeColor (r, g, b)
 	return c
 end
 
-local Frame= {}
+local function frameDraw(frame, x, y, r, sx, sy, ox, oy)
+	r= r or 0
+	sx= sx or 1
+	sy= sy or sx
+	ox= ox or 0
+	oy= oy or 0
 
-function Frame.draw(self)
-	
-	for i,sprite in ipairs(self) do
+	love.graphics.push()
+	love.graphics.translate (x, y)
+	love.graphics.rotate (r)
+	love.graphics.scale (sx, sy)
+	love.graphics.translate (-ox, -oy)
+
+	for i,sprite in ipairs(frame) do
 		local r, g, b= parseColor (sprite.color)
 		local a= (sprite.opacity / 100) * 255
 		love.graphics.setColor (r, g, b, a)
@@ -75,6 +93,8 @@ function Frame.draw(self)
 
 		love.graphics.draw (img, sprite.x, sprite.y, angle, scalex, scaley)
 	end
+
+	love.graphics.pop()
 end
 
 -- tweening
@@ -126,43 +146,29 @@ local function findSprite (frame, image)
 	end
 end
 
-function Frame.mix (frame1, frame2, ratio)
-	dest= {
-		draw= Frame.draw,
-		mix= Frame.mix,
-	}
+local function frameMix (frame1, frame2, ratio)
+	local sprites= {}
 
 	for i,sprite1 in ipairs(frame1) do
-		local sprite2= findSprite (frame2, sprite1.image)
-		dest[i]= sprite2 and mixSprite (sprite1, sprite2, ratio) or sprite1
+		local sprite2= frame2.findSprite (sprite1.image)
+		 sprites[i]= sprite2 and mixSprite (sprite1, sprite2, ratio) or sprite1
 	end
 
-	return dest
+	return Spriter.newFrame (sprites)
+end
+
+function Spriter.newFrame (sprites)
+	return {
+		draw= function(x, y, r, sx, sy, ox, oy) return frameDraw (sprites, x, y, r, sx, sy, ox, oy) end,
+		findSprite= function(name) return findSprite(sprites, name) end,
+		mix= function(frame2, ratio) return frameMix(sprites, frame2, ratio) end,
+}
 end
 
 -- spriter
 
-local spriter= {}
-char= nil
-frames= nil
-
-function spriter.new (path)
-	local animdata, framedata;
-	char= function(dict) animdata= dict end
-	frames= function(dict) framedata= dict end
-
-	love.filesystem.load(path)()
-
-	for k,anim in pairs(animdata) do
-		anim.sumDuration= Anim.sumDuration
-		anim.getFrameIndex= Anim.getFrameIndex
-		anim.getFrameName= function(self, i) return self[i].name end
-	end
-
-	for k,frame in pairs(framedata) do
-		frame.draw= Frame.draw
-		frame.mix= Frame.mix
-	end
+function Spriter.new (path)
+	local animdata, framedata= love.filesystem.load(path)()
 
 	return {
 		getAnim= function(name) return animdata[name] end,
@@ -170,4 +176,4 @@ function spriter.new (path)
 	}
 end
 
-return spriter
+return Spriter
